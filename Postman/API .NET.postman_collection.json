@@ -1,0 +1,271 @@
+{
+	"info": {
+		"_postman_id": "f395af29-ff90-4826-9987-064678ca9532",
+		"name": "API .NET",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Course",
+			"item": [
+				{
+					"name": "Create Course",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Title\": \"Aula de Web Services\",\n\t\"URL\": \"https://localhost:44376/api/Courses/\",\n\t\"Channel\": \"DotNet\",\n\t\"PublicationDate\": \"2020/06/12\",\n\t\"WorkSchedule\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}api/Courses/",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"Courses",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Course",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}api/Courses/6",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"Courses",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Course",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Title\": \"Something\",\n\t\"URL\": \"https://localhost:44376/api/Courses/\",\n\t\"Channel\": \"DotNet\",\n\t\"PublicationDate\": \"2020/06/12\",\n\t\"WorkSchedule\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}api/Courses/7",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"Courses",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}api/Courses/",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"Courses",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Payments",
+			"item": [
+				{
+					"name": "Create Payment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Valor\": 2,\n\t\"Parcela\": \"05/2000\",\n\t\"DataPagamento\": \"2020/05/21\",\n\t\"Nome\": \"Someone\",\n\t\"CPF\": \"30030030030\",\n\t\"TipoPagamento\": \"BOLETO\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}api/Pagamento",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"Pagamento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Payment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}api/Pagamento",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"Pagamento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Payment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}api/Pagamento/10",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"Pagamento",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Payment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Valor\": 9,\n\t\"Parcela\": \"05/2000\",\n\t\"DataPagamento\": \"2020/05/21\",\n\t\"Nome\": \"I am the new 10\",\n\t\"CPF\": \"30030030030\",\n\t\"TipoPagamento\": \"BOLETO\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}api/Pagamento/11",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"Pagamento",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Address",
+			"item": [
+				{
+					"name": "Create Address",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"CEP\": \"39400349\",\n\t\"Street\": \"Some Street 5\",\n\t\"Number\": 1212,\n\t\"Complement\": \"Complement 2\",\n\t\"Reference\": \"Reference 2\",\n\t\"UF\": \"RS\",\n\t\"Neighborhood\": \"Some neighborhood 5\",\n\t\"City\": \"Some City 5\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}api/Addresses",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"Addresses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Addresses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}api/Addresses",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"Addresses"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "daa3c6fd-4145-42e4-b2f7-8a4327819ea5",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "a11533c4-e057-4dce-8841-179af002e448",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
